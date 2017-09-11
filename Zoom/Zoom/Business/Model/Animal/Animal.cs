@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoom.Model.Animal
 {
-    abstract class Animal
+    public abstract class Animal
     {
         private string nom { get; set; }
 

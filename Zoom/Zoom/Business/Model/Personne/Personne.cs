@@ -8,6 +8,10 @@ namespace Zoom.Model.Personne
 {
     public abstract class Personne
     {
+        public string nom { get; set; }
+
+        public string prenom { get; set; }
+
 
     }
 }

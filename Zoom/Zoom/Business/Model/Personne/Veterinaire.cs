@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Zoom.Model.Personne
 {
-    class Veterinaire : Employe
+    public class Veterinaire : Employe
     {
+        public void soigner(Model.Animal.Animal a)
+        {
+
+        }
     }
 }

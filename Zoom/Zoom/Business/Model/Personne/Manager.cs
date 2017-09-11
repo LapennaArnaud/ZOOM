@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoom.Model.Personne
 {
-    class Manager : Employe
+    public class Manager : Employe
     {
     }
 }

@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Zoom.Model.Personne
 {
-    abstract class Employe : Personne
+    public class Employe : Personne
     {
+        public DateTime date_naissance { get; set; }
+
+
     }
 }
