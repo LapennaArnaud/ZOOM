@@ -43,17 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Controleur\Zoom.cs" />
     <Compile Include="Business\Model\Aliment\Aliment.cs" />
     <Compile Include="Business\Model\Aliment\Cereale.cs" />
     <Compile Include="Business\Model\Aliment\Fruit.cs" />
     <Compile Include="Business\Model\Aliment\Legume.cs" />
     <Compile Include="Business\Model\Aliment\Viande.cs" />
-    <Compile Include="Business\Model\Animal\Animal.cs" />
+    <Compile Include="Business\Model\Animal\AAnimal.cs" />
     <Compile Include="Business\Model\Animal\Crocodile.cs" />
     <Compile Include="Business\Model\Animal\Dauphin.cs" />
     <Compile Include="Business\Model\Animal\Girafe.cs" />
     <Compile Include="Business\Model\Animal\Lion.cs" />
     <Compile Include="Business\Model\Animal\Singe.cs" />
+    <Compile Include="Business\Model\Gestion\Banque.cs" />
+    <Compile Include="Business\Model\Gestion\Caisse.cs" />
+    <Compile Include="Business\Model\Gestion\Stock.cs" />
     <Compile Include="Business\Model\Structure\Aquarium.cs" />
     <Compile Include="Business\Model\Structure\Structure.cs" />
     <Compile Include="Business\Model\Structure\Enclos.cs" />
