@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.Model.Structure
+namespace Zoom.Business.Model.Structure
 {
     abstract class Structure
     {

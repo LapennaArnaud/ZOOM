@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.Business.Model.Structure
+namespace Zoom.Business.Controleur
 {
-    class Enclos : Structure
+    class Zoom
     {
     }
 }

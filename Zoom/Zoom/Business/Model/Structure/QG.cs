@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.Model.Batiment
+namespace Zoom.Business.Model.Structure
 {
-    class QG : Batiment
+    class QG : Structure
     {
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.Model.Aliment
+namespace Zoom.Business.Model.Aliment
 {
     class Viande : Aliment
     {

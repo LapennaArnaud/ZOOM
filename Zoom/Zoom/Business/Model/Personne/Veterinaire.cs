@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.Model.Personne
+namespace Zoom.Business.Model.Personne
 {
     public class Veterinaire : Employe
     {
-        public void soigner(Model.Animal.Animal a)
+        public void soigner(Model.Animal.AAnimal a)
         {
 
         }

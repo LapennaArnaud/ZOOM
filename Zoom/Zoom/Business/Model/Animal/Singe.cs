@@ -4,11 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.Model.Animal
+namespace Zoom.Business.Model.Animal
 {
-    class Singe : Animal
+    public class Singe : AAnimal
     {
-        public override void manger()
+
+        public Singe(string nom, Sexe sexe) : base(nom,sexe)
+        {
+
+        }
+
+        public override void Manger()
         {
             throw new NotImplementedException();
         }
