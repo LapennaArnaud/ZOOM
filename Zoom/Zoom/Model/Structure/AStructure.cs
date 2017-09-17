@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Zoom.BLL.Model.Structure
 {
-    public class Aquarium : AStructure
+    public abstract class AStructure
     {
     }
 }
+ 

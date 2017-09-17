@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.BLL.Model.Structure
+namespace Zoom.BLL.Model
 {
-    public class Aquarium : AStructure
+    public enum ESexe
     {
+        Male,
+        Femelle,
+        Homme,
+        Femme
     }
 }

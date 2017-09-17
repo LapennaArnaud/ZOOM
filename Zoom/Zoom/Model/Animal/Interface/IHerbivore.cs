@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.BLL.Model.Animal
+namespace Zoom.BLL.Model.Animal.Interface
 {
-    public enum ESexe
+    interface IHerbivore
     {
-        Male,
-        Femelle
     }
 }

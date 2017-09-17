@@ -7,8 +7,8 @@
     <ProjectGuid>{9F718FD1-A1C7-493D-AFD9-64E420C24C90}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Zoom</RootNamespace>
-    <AssemblyName>Zoom</AssemblyName>
+    <RootNamespace>Zoom.BLL</RootNamespace>
+    <AssemblyName>Zoom.BLL</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Controleur\Zoom.cs" />
     <Compile Include="Gestionnaire\GAnimal.cs" />
+    <Compile Include="Gestionnaire\GPersonne.cs" />
     <Compile Include="Model\Activite\Activite.cs" />
     <Compile Include="Model\Activite\Spectacle.cs" />
     <Compile Include="Model\Aliment\Aliment.cs" />
@@ -56,20 +57,26 @@
     <Compile Include="Model\Animal\Crocodile.cs" />
     <Compile Include="Model\Animal\Dauphin.cs" />
     <Compile Include="Model\Animal\Girafe.cs" />
+    <Compile Include="Model\Animal\Interface\ICarnivore.cs" />
+    <Compile Include="Model\Animal\Interface\IHerbivore.cs" />
+    <Compile Include="Model\Animal\Interface\IOmnivore.cs" />
     <Compile Include="Model\Animal\Lion.cs" />
-    <Compile Include="Model\Animal\ESexe.cs" />
+    <Compile Include="Model\ESexe.cs" />
     <Compile Include="Model\Animal\Singe.cs" />
     <Compile Include="Gestion\Banque.cs" />
     <Compile Include="Gestion\Caisse.cs" />
     <Compile Include="Gestion\Stock.cs" />
+    <Compile Include="Model\Personne\Animateur.cs" />
+    <Compile Include="Model\Personne\ECategorieBillet.cs" />
+    <Compile Include="Model\Personne\Interface\INourrir.cs" />
     <Compile Include="Model\Structure\Aquarium.cs" />
-    <Compile Include="Model\Structure\Structure.cs" />
+    <Compile Include="Model\Structure\AStructure.cs" />
     <Compile Include="Model\Structure\Enclos.cs" />
     <Compile Include="Model\Structure\QG.cs" />
     <Compile Include="Model\Structure\Stock.cs" />
     <Compile Include="Model\Personne\Employe.cs" />
     <Compile Include="Model\Personne\Manager.cs" />
-    <Compile Include="Model\Personne\Personne.cs" />
+    <Compile Include="Model\Personne\APersonne.cs" />
     <Compile Include="Model\Personne\Securite.cs" />
     <Compile Include="Model\Personne\Veterinaire.cs" />
     <Compile Include="Model\Personne\Visiteur.cs" />

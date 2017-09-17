@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoom.BLL.Model.Structure
 {
-    public class Enclos : Structure
+    public class Enclos : AStructure
     {
     }
 }

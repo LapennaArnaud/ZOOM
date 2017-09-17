@@ -8,13 +8,13 @@ using Zoom.BLL.Model.Personne.Interface;
 
 namespace Zoom.BLL.Model.Personne
 {
-    public class Veterinaire : Employe, INourrir
+    public class Animateur : Employe, INourrir
     {
-        public Veterinaire(int id, string nom, string prenom, ESexe sexe) : base(id, nom, prenom, sexe)
+        public Animateur(int id, string nom, string prenom, ESexe sexe) : base(id, nom, prenom, sexe)
         {
         }
 
-        public Veterinaire(int id, string nom, string prenom, ESexe sexe, DateTime dateNaissance) : base(id, nom, prenom, sexe, dateNaissance)
+        public Animateur(int id, string nom, string prenom, ESexe sexe, DateTime dateNaissance) : base(id, nom, prenom, sexe, dateNaissance)
         {
         }
 
@@ -22,10 +22,9 @@ namespace Zoom.BLL.Model.Personne
         {
             throw new NotImplementedException();
         }
-
-        public void Soigner(Model.Animal.AAnimal a)
+        public void Animer()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

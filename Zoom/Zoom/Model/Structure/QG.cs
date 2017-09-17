@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoom.BLL.Model.Structure
 {
-    public class QG : Structure
+    public class QG : AStructure
     {
     }
 }

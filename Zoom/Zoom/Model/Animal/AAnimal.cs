@@ -18,12 +18,14 @@ namespace Zoom.BLL.Model.Animal
 
         public ESexe Sexe { get; private set; }
 
-        private static int ageMaturite = 2;
+        private static int maturite = 3;
 
-        private static int nbPatte = 4;
-
-
+        public abstract int Maturite
+        {
+            get;
+        }
         
+        private static int nbPatte = 4;
         #endregion
 
 
@@ -45,7 +47,7 @@ namespace Zoom.BLL.Model.Animal
         #region Methods
         public abstract void Manger();
 
-        //TODO : à faire ici ou au niveau du service ?
+        // TODO : à faire ici ou au niveau du service ?
 
         public string Reproduction(AAnimal partenaire)
         {
@@ -53,8 +55,8 @@ namespace Zoom.BLL.Model.Animal
                 (
                     this.MemeEspece(partenaire)
                     && this.Sexe != partenaire.Sexe
-                    && this.CalculAge() >= this.GetMaturite()
-                    && partenaire.CalculAge() >= partenaire.GetMaturite()
+                    && this.CalculAge() >= this.Maturite 
+                    && partenaire.CalculAge() >= partenaire.Maturite                
                 ) 
                 ? "Reproduction" : "Impossible";
         }
@@ -62,13 +64,12 @@ namespace Zoom.BLL.Model.Animal
         public int CalculAge()
         {
             return (DateTime.Now.Year - this.DateNaissance.Year);
-
         }
 
         public override string ToString()
         {
             string determinant = (this.Sexe == ESexe.Femelle ? "la" : "le");
-            return string.Format("{2} {1} {0}", this.GetType().Name, determinant, this.Nom);
+            return string.Format("{3} {2} {1} {0}", this.GetType().Name, determinant, this.Nom, this.Id);
         }
 
         public bool MemeEspece(Object animal)
@@ -78,10 +79,7 @@ namespace Zoom.BLL.Model.Animal
             return false;
         }
 
-        public int GetMaturite()
-        {
-            return AAnimal.ageMaturite;
-        }
+        
         #endregion
 
     }   

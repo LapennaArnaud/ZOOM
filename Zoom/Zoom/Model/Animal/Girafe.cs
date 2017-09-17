@@ -8,6 +8,8 @@ namespace Zoom.BLL.Model.Animal
 {
     public class Girafe : AAnimal
     {
+        public override int Maturite => 3;
+
         public override void Manger()
         {
             throw new NotImplementedException();

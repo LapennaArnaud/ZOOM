@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace Zoom.BLL.Model.Personne
 {
-    public abstract class Personne
+    public enum ECategorieBillet
     {
-        public string nom { get; set; }
-
-        public string prenom { get; set; }
-
-
+        Enfant,
+        Etudiant,
+        Adulte
     }
 }

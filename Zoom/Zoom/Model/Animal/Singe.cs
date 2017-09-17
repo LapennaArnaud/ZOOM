@@ -19,6 +19,8 @@ namespace Zoom.BLL.Model.Animal
 
         }
 
+        public override int Maturite => 3;
+
         public override void Manger()
         {
             throw new NotImplementedException();

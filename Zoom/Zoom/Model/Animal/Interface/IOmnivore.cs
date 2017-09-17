@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zoom.BLL.Model.Structure
+namespace Zoom.BLL.Model.Animal.Interface
 {
-    public class Aquarium : AStructure
+    interface IOmnivore
     {
     }
 }
