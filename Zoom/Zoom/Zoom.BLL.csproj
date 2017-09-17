@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F718FD1-A1C7-493D-AFD9-64E420C24C90}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zoom</RootNamespace>
+    <AssemblyName>Zoom</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controleur\Zoom.cs" />
+    <Compile Include="Gestionnaire\GAnimal.cs" />
+    <Compile Include="Model\Activite\Activite.cs" />
+    <Compile Include="Model\Activite\Spectacle.cs" />
+    <Compile Include="Model\Aliment\Aliment.cs" />
+    <Compile Include="Model\Aliment\Cereale.cs" />
+    <Compile Include="Model\Aliment\Fruit.cs" />
+    <Compile Include="Model\Aliment\Legume.cs" />
+    <Compile Include="Model\Aliment\Viande.cs" />
+    <Compile Include="Model\Animal\AAnimal.cs" />
+    <Compile Include="Model\Animal\Crocodile.cs" />
+    <Compile Include="Model\Animal\Dauphin.cs" />
+    <Compile Include="Model\Animal\Girafe.cs" />
+    <Compile Include="Model\Animal\Lion.cs" />
+    <Compile Include="Model\Animal\ESexe.cs" />
+    <Compile Include="Model\Animal\Singe.cs" />
+    <Compile Include="Gestion\Banque.cs" />
+    <Compile Include="Gestion\Caisse.cs" />
+    <Compile Include="Gestion\Stock.cs" />
+    <Compile Include="Model\Structure\Aquarium.cs" />
+    <Compile Include="Model\Structure\Structure.cs" />
+    <Compile Include="Model\Structure\Enclos.cs" />
+    <Compile Include="Model\Structure\QG.cs" />
+    <Compile Include="Model\Structure\Stock.cs" />
+    <Compile Include="Model\Personne\Employe.cs" />
+    <Compile Include="Model\Personne\Manager.cs" />
+    <Compile Include="Model\Personne\Personne.cs" />
+    <Compile Include="Model\Personne\Securite.cs" />
+    <Compile Include="Model\Personne\Veterinaire.cs" />
+    <Compile Include="Model\Personne\Visiteur.cs" />
+    <Compile Include="Service\S_Aliment.cs" />
+    <Compile Include="Service\S_Animal.cs" />
+    <Compile Include="Service\S_Batiment.cs" />
+    <Compile Include="Service\S_Personne.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using Zoom.Business.Model.Animal;
+using Zoom.BLL.Model.Animal;
 
 
 namespace UnitTestZoom

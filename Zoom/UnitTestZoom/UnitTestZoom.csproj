@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Zoom\Zoom.csproj">
+    <ProjectReference Include="..\Zoom\Zoom.BLL.csproj">
       <Project>{9F718FD1-A1C7-493D-AFD9-64E420C24C90}</Project>
-      <Name>Zoom</Name>
+      <Name>Zoom.BLL</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
