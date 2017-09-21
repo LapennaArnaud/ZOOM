@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoom.BLL.Model.Animal
 {
-    class Crocodile : AAnimal
+    class Crocodile : AAnimal, IEntite
     {
         public Crocodile(int id, string nom, ESexe sexe) : base(id, nom, sexe, DateTime.Now)
         {

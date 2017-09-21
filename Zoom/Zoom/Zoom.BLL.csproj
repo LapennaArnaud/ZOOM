@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Controleur\Zoom.cs" />
     <Compile Include="Gestionnaire\GAnimal.cs" />
+    <Compile Include="Gestionnaire\GEntite.cs" />
     <Compile Include="Gestionnaire\GPersonne.cs" />
     <Compile Include="Model\Activite\Activite.cs" />
     <Compile Include="Model\Activite\Spectacle.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Gestion\Banque.cs" />
     <Compile Include="Gestion\Caisse.cs" />
     <Compile Include="Gestion\Stock.cs" />
+    <Compile Include="Model\IEntite.cs" />
     <Compile Include="Model\Personne\Animateur.cs" />
     <Compile Include="Model\Personne\ECategorieBillet.cs" />
     <Compile Include="Model\Personne\Interface\INourrir.cs" />

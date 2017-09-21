@@ -7,7 +7,7 @@ using Zoom.BLL.Model.Animal.Interface;
 
 namespace Zoom.BLL.Model.Animal
 {
-    public class Lion : AAnimal, ICarnivore
+    public class Lion : AAnimal, ICarnivore, IEntite
     {
         public override int Maturite { get => 4; }
 

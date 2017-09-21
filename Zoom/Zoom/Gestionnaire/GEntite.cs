@@ -20,9 +20,16 @@ namespace Zoom.BLL.Gestionnaire
             set { listeEntite  = value; }
         }
 
-        public static void Add(T entite)
+        public static T Create(Type type, Object[] parameters)
+        {
+             return Add((T)Activator.CreateInstance(type,parameters));
+        }
+
+        public static T Add(T entite)
         {
             listeEntite.Add(entite);
+            Type t = entite.GetType();
+            return entite;
         }
 
         public static void Remove(T entite)
@@ -30,7 +37,7 @@ namespace Zoom.BLL.Gestionnaire
             listeEntite.Remove(entite);
         }
 
-        public static List<T> GetOnebyID(int id)
+        public static T GetOnebyID(int id)
         {
             return ListeEntite.Find(x=> x.Id == id);
         }

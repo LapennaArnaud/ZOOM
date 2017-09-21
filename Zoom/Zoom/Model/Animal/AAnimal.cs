@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace Zoom.BLL.Model.Animal
 {
-    public abstract class AAnimal
+    public abstract class AAnimal : IEntite
     {
 
         #region Props
-        public int Id { get; private set; }
+        public int Id { get; set; }
 
-        public string Nom { get; private set; }
+        public string Nom { get; set; }
 
-        public DateTime DateNaissance { get; private set; }
+        public DateTime DateNaissance { get; set; }
 
-        public ESexe Sexe { get; private set; }
+        public ESexe Sexe { get; set; }
 
         private static int maturite = 3;
 
@@ -61,6 +61,7 @@ namespace Zoom.BLL.Model.Animal
                 ? "Reproduction" : "Impossible";
         }
 
+        // Service
         public int CalculAge()
         {
             return (DateTime.Now.Year - this.DateNaissance.Year);
@@ -72,6 +73,7 @@ namespace Zoom.BLL.Model.Animal
             return string.Format("{3} {2} {1} {0}", this.GetType().Name, determinant, this.Nom, this.Id);
         }
 
+        //Service
         public bool MemeEspece(Object animal)
         {
             if(this.GetType() == this.GetType())
