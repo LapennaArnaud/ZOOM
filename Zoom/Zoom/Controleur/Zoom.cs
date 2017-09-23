@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Zoom.BLL.Gestionnaire;
-using Zoom.BLL.Model.Animal;
+using Zoom.DAL.Gestionnaire;
+using Zoom.Model.Animal;
 
 namespace Zoom.BLL.Controleur
 {
