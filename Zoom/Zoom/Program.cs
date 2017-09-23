@@ -32,15 +32,15 @@ namespace Zoom
         */
         public static void JeuEssai()
         {
-            Zoo zoom = new Zoo("Zoologie","25 rue du tracteur", "Perdivile", 10.3);
+            BaseService.Creer(typeof(Zoo), new object[] {"Zoologie", "25 rue du tracteur", "Perdivile", 10.3});
 
             BaseService.Creer(typeof(Lion), new object[]{ "GeorgetteBis", AAnimal.ESexe.Femelle, DateTime.Now.AddYears(-5) });
             BaseService.Creer(typeof(Lion), new object[] { "GeorgesBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
             BaseService.Creer(typeof(Crocodile), new object[] { "CrocoBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
             BaseService.Creer(typeof(Dauphin), new object[] { "DauphinBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
 
-            
-            //BaseService.Creer(typeof(Animateur), new object[] {"Testi", "Georges", APersonne.ESexe.Femme, DateTime.Now.AddYears(-20) });
+
+            BaseService.Creer(typeof(Animateur), new object[] {"Testi", "Georges", APersonne.ESexe.Femme, DateTime.Now.AddYears(-20) });
 
             BaseService.Creer(typeof(Aquarium), new object[] { "noob", 100, 200 });
             BaseService.Creer(typeof(Enclos), new object[] { "noob2", 100, 200 });
@@ -56,55 +56,17 @@ namespace Zoom
 
             S_Structure.GetAllAEnclos().ToList().ForEach(Console.Write);
 
+
             //APersonne p2 = GPersonne.AddVisiteur("Woulzy", "Charles", APersonne.ESexe.Homme, ECategorieBillet.Adulte);
-            //S_Animal.Reproduction((AAnimal)BaseService.GetOnebyID(0), (AAnimal)BaseService.GetOnebyID(1));
+            S_Animal.Reproduction((AAnimal)BaseService.GetOnebyID(0), (AAnimal)BaseService.GetOnebyID(1));
 
-
-            // List<IEntite> lista = BaseService.GetAll();
-            /*foreach(AAnimal a in lista.Where(x => x is AAnimal))
-            {
-                Console.WriteLine(a.ToString() + " \n\r       Pere : " + a.Pere);
-               
-            }
-            Console.WriteLine(S_Animal.AfficherAll());
-            foreach (APersonne p in lista.Where(x => x is APersonne))
-            {
-                Console.WriteLine(p.ToString());
-
-            }*/
-
-            /* BaseService.Creer(typeof(Cereale), new object[] { "blé" });
-
-             BaseService.Creer(typeof(Stock), new object[] { "Stock1", 10, 10 });
-
-             Console.WriteLine(BaseService.AfficherAll() + "\n\r");
-
-             Console.WriteLine(S_Aliment.AfficherAll() + "\n\r");
-
-             Console.WriteLine(S_Structure.AfficherAll() + "\n\r");
-
-             Stock s = (Stock)BaseService.GetOnebyID(7);
-             AAliment al = (AAliment)BaseService.GetOnebyID(6);
-
-             s.ListeAliment.Add(al, 10);
-
-             BaseService.Supprimer(BaseService.GetOnebyID(6));
-
-             Console.WriteLine(S_Structure.AfficherAll() + "\n\r");
-             List<AAliment> aa = s.ListeAliment.Keys.ToList();
-             s.ListeAliment.Keys.ToList().ForEach(Console.WriteLine);
-
-             */
-
-
-            /* foreach (Crocodile a in lista.Where(x => x is Crocodile))
-             {
-                 Console.WriteLine(a.ToString());
-
-             }*/
-
-            //Console.WriteLine(GAnimal.AfficherAll());
-            //Console.WriteLine(GPersonne.AfficherAll());
+            Console.WriteLine("\n\r------------- Liste Entités ---------- \n\r");
+            BaseService.GetAll().ToList().ForEach(Console.WriteLine);
+            
+            Console.WriteLine("\n\r------------- Liste Animals ---------- \n\r");
+            S_Animal.AfficherAll().ToList().ForEach(Console.Write);
+            
+            
         }
     }
 }

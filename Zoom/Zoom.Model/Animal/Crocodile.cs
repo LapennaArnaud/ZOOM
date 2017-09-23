@@ -7,7 +7,7 @@ using Zoom.Model.Animal.Interface;
 
 namespace Zoom.Model.Animal
 {
-    public class Crocodile : AAnimal, IEntite, ICarnivore
+    public class Crocodile : AAnimal, ICarnivore
     {
         public override int Maturite { get; set; } = 3;
         public override int NbPatte { get; set; } = 4;

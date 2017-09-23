@@ -15,14 +15,5 @@ namespace Zoom.Model.Structure
         {
             this.ListAnimal = new List<AAnimal>();
         }
-        public override string ToString()
-        {
-            string res = base.ToString();
-            foreach (AAnimal animal in this.ListAnimal)
-            {
-                res += animal.ToString();
-            }
-            return res;
-        }
     }
 }

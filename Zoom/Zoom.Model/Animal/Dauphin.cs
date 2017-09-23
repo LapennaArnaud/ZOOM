@@ -7,7 +7,7 @@ using Zoom.Model.Animal.Interface;
 
 namespace Zoom.Model.Animal
 {
-    public class Dauphin : AAnimal, IEntite, ICarnivore
+    public class Dauphin : AAnimal, ICarnivore
     {
         public override int Maturite { get; set; } = 4;
         public override int NbPatte { get; set; } = 0;
