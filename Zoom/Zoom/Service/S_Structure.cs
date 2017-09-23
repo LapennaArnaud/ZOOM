@@ -18,11 +18,23 @@ namespace Zoom.BLL.Service
         {
             // The animal can be only in one EEnclos
             if (s is Aquarium a && animal is Dauphin)
+            {
+                DesaffecterAnimal(animal);
                 a.ListAnimal.Add(animal);
-
+                
+            }
             else if (s is Enclos e && !(animal is Dauphin))
-              e.ListAnimal.Add(animal);
+            {
+                DesaffecterAnimal(animal);
+                e.ListAnimal.Add(animal);
+            }
+            else
+            {
+                throw new Exception("Type d'enclos invalide");
+
+            }
         }
+    
 
         public static void DesaffecterAnimal(AStructure s, AAnimal animal)
         {
@@ -33,14 +45,28 @@ namespace Zoom.BLL.Service
                 e.ListAnimal.Remove(animal);
         }
 
-        // Impossible to secure 2 structures for the same securiteMan
-        public static void Surveiller(AStructure s, Securite sc)
+        public static void DesaffecterAnimal(AAnimal animal)
+        {
+            List<IEntite> liEnclos = GetAllAEnclos();
+            foreach(AEnclos enclo in liEnclos)
+            {
+                enclo.ListAnimal.Remove(animal);
+            }
+        }
+
+// Impossible to secure 2 structures for the same securiteMan
+public static void Surveiller(AStructure s, Securite sc)
         {
             if (GetAllSecureStructure().FirstOrDefault(x => ((AStructure)x).Surveillant.Equals(sc)) is null)
                 s.Surveillant = sc;
         }
 
-        public static void StopSurveiller(AStructure s)
+        public static List<IEntite> GetAllAEnclos()
+        {
+            return GEntite<IEntite>.GetAll().FindAll(x => x is AEnclos);
+        }
+
+    public static void StopSurveiller(AStructure s)
         {
             s.Surveillant = null;
         }

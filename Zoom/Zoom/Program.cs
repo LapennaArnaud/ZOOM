@@ -32,41 +32,66 @@ namespace Zoom
         */
         public static void JeuEssai()
         {
-            BaseService.Creer(typeof(Zoo), new object[] {"Zoologie", "25 rue du tracteur", "Perdivile", 10.3});
+            try
+            {
+                BaseService.Creer(typeof(Zoo), new object[] { "Zoologie", "25 rue du tracteur", "Perdivile", 10.3 });
 
-            BaseService.Creer(typeof(Lion), new object[]{ "GeorgetteBis", AAnimal.ESexe.Femelle, DateTime.Now.AddYears(-5) });
-            BaseService.Creer(typeof(Lion), new object[] { "GeorgesBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
-            BaseService.Creer(typeof(Crocodile), new object[] { "CrocoBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
-            BaseService.Creer(typeof(Dauphin), new object[] { "DauphinBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
+                BaseService.Creer(typeof(Lion), new object[] { "GeorgetteBis", AAnimal.ESexe.Femelle, DateTime.Now.AddYears(-5) });
+                BaseService.Creer(typeof(Lion), new object[] { "GeorgesBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
+                BaseService.Creer(typeof(Crocodile), new object[] { "CrocoBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
+                BaseService.Creer(typeof(Dauphin), new object[] { "DauphinBis", AAnimal.ESexe.Male, DateTime.Now.AddYears(-5) });
 
+                BaseService.Creer(typeof(Fruit), new object[] { "Tomate" });
 
-            BaseService.Creer(typeof(Animateur), new object[] {"Testi", "Georges", APersonne.ESexe.Femme, DateTime.Now.AddYears(-20) });
-
-            BaseService.Creer(typeof(Aquarium), new object[] { "noob", 100, 200 });
-            BaseService.Creer(typeof(Enclos), new object[] { "noob2", 100, 200 });
-
-            S_Structure.AffecterAnimal((AStructure)(GEntite<IEntite>.GetOnebyID(5)), (AAnimal)(GEntite<IEntite>.GetOnebyID(1)));
-            S_Structure.AffecterAnimal((AStructure)(GEntite<IEntite>.GetOnebyID(4)), (AAnimal)(GEntite<IEntite>.GetOnebyID(3)));
-            S_Structure.AffecterAnimal((AStructure)(GEntite<IEntite>.GetOnebyID(5)), (AAnimal)(GEntite<IEntite>.GetOnebyID(2)));
-            S_Structure.AffecterAnimal((AStructure)(GEntite<IEntite>.GetOnebyID(5)), (AAnimal)(GEntite<IEntite>.GetOnebyID(0)));
-
-            S_Structure.GetAllAEnclos().ToList().ForEach(Console.Write);
-
-            S_Structure.DesaffecterAnimal((AStructure)(GEntite<IEntite>.GetOnebyID(5)), (AAnimal)(GEntite<IEntite>.GetOnebyID(0)));
-
-            S_Structure.GetAllAEnclos().ToList().ForEach(Console.Write);
+                BaseService.Creer(typeof(Animateur), new object[] { "Testi", "Georges", APersonne.ESexe.Femme, DateTime.Now.AddYears(-20) });
 
 
-            //APersonne p2 = GPersonne.AddVisiteur("Woulzy", "Charles", APersonne.ESexe.Homme, ECategorieBillet.Adulte);
-            S_Animal.Reproduction((AAnimal)BaseService.GetOnebyID(0), (AAnimal)BaseService.GetOnebyID(1));
 
-            Console.WriteLine("\n\r------------- Liste Entités ---------- \n\r");
-            BaseService.GetAll().ToList().ForEach(Console.WriteLine);
+                BaseService.Creer(typeof(Aquarium), new object[] { "noob", 100, 200,10 });
+                BaseService.Creer(typeof(Enclos), new object[] { "noob2", 100, 200 });
+            }
+            catch(Exception e)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(e.Message);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+
             
-            Console.WriteLine("\n\r------------- Liste Animals ---------- \n\r");
-            S_Animal.AfficherAll().ToList().ForEach(Console.Write);
-            
-            
+            try
+            {
+                S_Structure.AffecterAnimal((AStructure)S_Structure.GetAllAEnclos().ElementAt(0), (AAnimal)S_Animal.GetAll().ElementAt(3));
+                S_Structure.AffecterAnimal((AStructure)S_Structure.GetAllAEnclos().ElementAt(1), (AAnimal)S_Animal.GetAll().ElementAt(2));
+                S_Structure.AffecterAnimal((AStructure)S_Structure.GetAllAEnclos().ElementAt(1), (AAnimal)S_Animal.GetAll().ElementAt(1));
+                S_Structure.AffecterAnimal((AStructure)S_Structure.GetAllAEnclos().ElementAt(1), (AAnimal)S_Animal.GetAll().ElementAt(0));
+                Console.WriteLine("\n\r------------- Liste Enclos ---------- \n\r");
+                S_Structure.GetAllAEnclos().ToList().ForEach(Console.WriteLine);
+
+                S_Structure.DesaffecterAnimal((AStructure)S_Structure.GetAllAEnclos().ElementAt(1), (AAnimal)S_Animal.GetAll().ElementAt(0));
+                Console.WriteLine("\n\r------------- Liste Enclos ---------- \n\r");
+                S_Structure.GetAllAEnclos().ToList().ForEach(Console.WriteLine);
+
+
+                //APersonne p2 = GPersonne.AddVisiteur("Woulzy", "Charles", APersonne.ESexe.Homme, ECategorieBillet.Adulte);
+                S_Animal.Reproduction((AAnimal)S_Animal.GetAll().ElementAt(0), (AAnimal)S_Animal.GetAll().ElementAt(1));
+
+                Console.WriteLine("\n\r------------- Liste Entités ---------- \n\r");
+                BaseService.GetAll().ToList().ForEach(Console.WriteLine);
+
+                Console.WriteLine("\n\r------------- Liste Animals ---------- \n\r");
+                S_Animal.AfficherAll().ToList().ForEach(Console.Write);
+
+                Console.WriteLine("\n\r------------- Test nourrir ---------- \n\r");
+                S_Personne.Nourrir((APersonne)S_Personne.GetAll().ElementAt(0), (AAnimal)S_Animal.GetAll().ElementAt(0), (AAliment)S_Aliment.GetAll().ElementAt(0));
+            }
+            catch(Exception e)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(e.Message);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+
+
         }
     }
 }

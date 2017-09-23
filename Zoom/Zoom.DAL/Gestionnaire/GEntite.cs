@@ -35,7 +35,7 @@ namespace Zoom.DAL.Gestionnaire
             }
             catch (Exception e)
             {
-                return 0;
+                throw new Exception(e.Message + " Veuillez rentrer les paramètres valides pour " + type.Name) ;
             }
         }
 

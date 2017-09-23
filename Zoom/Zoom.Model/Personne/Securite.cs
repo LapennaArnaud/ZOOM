@@ -22,9 +22,5 @@ namespace Zoom.Model.Personne
             throw new NotImplementedException();
         }
 
-        public void Securise(AStructure P)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -26,8 +26,9 @@ namespace Zoom.BLL.Controleur
         /**
          * Contructors
          */
-        public Zoo(string nom, string adresse, string ville, double tarifBillet)
+        public Zoo(int id, string nom, string adresse, string ville, double tarifBillet)
         {
+            Id = id;
             Nom = nom;
             Adresse = adresse;
             Ville = ville;

@@ -18,10 +18,6 @@ namespace Zoom.Model.Personne
         {
         }
 
-        public void Nourrir(AAnimal a)
-        {
-            throw new NotImplementedException();
-        }
         public void Animer()
         {
             throw new NotImplementedException();

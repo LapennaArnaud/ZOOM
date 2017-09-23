@@ -44,7 +44,7 @@ namespace Zoom.Model.Animal
             DateNaissance = date;
             Sexe = sexe;
             Nom = nom;
-            Faim = 100;
+            Faim = 45;
             Vie = 100;
         }
 

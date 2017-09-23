@@ -20,11 +20,6 @@ namespace Zoom.Model.Personne
             DateNaissance = dateNaissance;
         }
 
-        public int CalculAge()
-        {
-            return (DateTime.Now.Year - this.DateNaissance.Year);
-        }
-
         public override string ToString()
         {
             string determinant = (this.Sexe == ESexe.Femme ? "e" : "");

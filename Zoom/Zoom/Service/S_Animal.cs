@@ -85,6 +85,8 @@ namespace Zoom.BLL.Service
                 {
                     animal.Faim += 12;
                 }
+                else
+                    throw new Exception(animal.GetType().Name + " ne peut manger l'aliment : " + aliment.GetType().Name);
             } 
         }
 

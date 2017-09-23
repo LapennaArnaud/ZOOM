@@ -9,6 +9,5 @@ namespace Zoom.Model.Personne.Interface
 {
     public interface INourrir
     {
-        void Nourrir(AAnimal a);
     }
 }
