@@ -5,6 +5,7 @@ using Zoom.Model;
 using Zoom.Model.Aliment;
 using Zoom.Model.Animal;
 using Zoom.Model.Animal.Interface;
+using Zoom.Model.Structure;
 using static Zoom.Model.Animal.AAnimal;
 
 namespace Zoom.BLL.Service
@@ -117,6 +118,11 @@ namespace Zoom.BLL.Service
         public new static List<IEntite> GetAll()
         {
             return GEntite<IEntite>.GetAll().FindAll(x => x is AAnimal);
+        }
+
+        public static List<IEntite> GetAllSansEnclos()
+        {
+            return GetAll().FindAll(x => !S_Structure.GetAllAnimalAvecEnclos().Contains(x)); 
         }
 
         public new static string AfficherAll()

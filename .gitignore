@@ -14,3 +14,6 @@
 /Zoom/Zoom.Model/obj
 /Zoom/Zoom.Model/Debug
 /Zoom/Zoom.BLL/obj/Debug
+/Zoom/Zoom.BLL/obj/Release
+/Zoom/Zoom.GUI/bin/Debug
+/Zoom/Zoom.BLL/bin/Debug

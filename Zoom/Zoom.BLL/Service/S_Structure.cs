@@ -35,7 +35,14 @@ namespace Zoom.BLL.Service
 
             }
         }
-    
+        public static void DesaffecterEnclos(AStructure s)
+        {
+            if (s is AEnclos a)
+                a.ListAnimal = new List<AAnimal>();
+
+            else
+                throw new Exception(s.GetType().Name + " n'est pas un enclos !");
+        }
 
         public static void DesaffecterAnimal(AStructure s, AAnimal animal)
         {
@@ -78,6 +85,18 @@ namespace Zoom.BLL.Service
             List<IEntite> allSecureStructure = GEntite<IEntite>.GetAll().FindAll(x => x is AStructure);
 
             return allSecureStructure.FindAll(x => !(((AStructure)x).Surveillant is null));
+
+        }
+
+        public static List<IEntite> GetAllAnimalAvecEnclos()
+        {
+            List<IEntite> listAnimalAvecEnclos = new List<IEntite>();
+            GetAllAEnclos().ForEach(x => {
+
+                ((AEnclos)x).ListAnimal.ForEach(a => listAnimalAvecEnclos.Add(a));
+            });
+
+            return listAnimalAvecEnclos;
 
         }
 

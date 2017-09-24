@@ -44,10 +44,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Zoom.BLL\Zoom.BLL.csproj">
+      <Project>{acfb5fc7-b429-48f7-a1d6-571d0d6df319}</Project>
+      <Name>Zoom.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Zoom.Model\Zoom.Model.csproj">
       <Project>{4292a96f-c6aa-44e4-a2c4-98b20123de8f}</Project>
       <Name>Zoom.Model</Name>

@@ -72,7 +72,7 @@ namespace Zoom.Model.Animal
         public override string ToString()
         {
             string determinant = (this.Sexe == ESexe.Femelle ? "la" : "le");
-            return string.Format("ID : {0} Type : {1} Nom : {2} Sexe : {3} \n\r Age Maturité : {4} Nb Patte : {5}", this.Id, this.GetType().Name, this.Nom, this.Sexe, this.Maturite, this.NbPatte );
+            return string.Format("ID : {0} Type : {1} Nom : {2} Sexe : {3} Age Maturité : {4} Nb Patte : {5}", this.Id, this.GetType().Name, this.Nom, this.Sexe, this.Maturite, this.NbPatte );
         }
 
         #endregion

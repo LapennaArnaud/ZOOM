@@ -28,7 +28,7 @@ namespace Zoom.Model.Personne
 
         public override string ToString()
         {
-            return string.Format("{3} {0} {1} {2}", this.Prenom, this.Nom, this.GetType().Name, this.Id);
+            return string.Format("{3} {1} {0} {2} {4}", this.Prenom, this.Nom, this.GetType().Name, this.Id, this.Sexe);
         }
 
     }

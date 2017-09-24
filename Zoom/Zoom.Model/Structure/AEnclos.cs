@@ -20,7 +20,7 @@ namespace Zoom.Model.Structure
             string res = base.ToString();
             foreach (AAnimal animal in this.ListAnimal)
             {
-                res += animal.ToString();
+                res += "\n    " + animal.ToString();
             }
             return res;
         }

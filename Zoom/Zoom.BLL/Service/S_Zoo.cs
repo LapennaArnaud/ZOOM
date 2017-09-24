@@ -22,13 +22,23 @@ namespace Zoom.BLL.Service
         }
         public static void AjouterVisiteur(Visiteur visi)
         {
-            Zoo.getInstance().ListVisiteur.Add(visi);
-            if (visi.CategorieBillet.Equals(ECategorieBillet.Adulte))
-                Zoo.getInstance().Tresorerie += Zoo.getInstance().TarifBillet;
-            else if (visi.CategorieBillet.Equals(ECategorieBillet.Etudiant))
-                Zoo.getInstance().Tresorerie += (Zoo.getInstance().TarifBillet * 0.7);
+            if (!Zoo.getInstance().ListVisiteur.Contains(visi))
+            {
+                Zoo.getInstance().ListVisiteur.Add(visi);
+                if (visi.CategorieBillet.Equals(ECategorieBillet.Adulte))
+                    AjouterArgent(Zoo.getInstance().TarifBillet);
+                    
+                else if (visi.CategorieBillet.Equals(ECategorieBillet.Etudiant))
+                    AjouterArgent(Zoo.getInstance().TarifBillet * 0.7); 
+                else
+                    AjouterArgent(Zoo.getInstance().TarifBillet * 0.5);
+                
+            }
             else
-                Zoo.getInstance().Tresorerie += (Zoo.getInstance().TarifBillet * 0.5);
+            {
+                throw new Exception("Ce visiteur est déjà dans le park ! \n * Visiteur : " + visi.ToString());
+            }
+           
         }
 
         public static void SupprimerVisiteur(Visiteur visi)
@@ -52,11 +62,11 @@ namespace Zoom.BLL.Service
                     quantiteOld = quantite; // set the exact quantite bought
                 }
 
-                SupprimerArgent(a.Prix * quantiteOld);
+                
             }
         }
 
-        public static void AjouterAliment(AAliment a, int quantite)
+        public static void AcheterAliment(AAliment a, int quantite)
         {
             if (Zoo.getInstance().Tresorerie >= a.Prix * quantite)
             {
@@ -65,7 +75,7 @@ namespace Zoom.BLL.Service
                 else
                     Zoo.getInstance().ListeAliment.Add(a, quantite);
 
-                AjouterArgent((a.Prix * quantite));
+                SupprimerArgent((a.Prix * quantite));
             }
 
             else
@@ -75,6 +85,11 @@ namespace Zoom.BLL.Service
         public static List<Visiteur> GetAllVisiteur()
         {
             return Zoo.getInstance().ListVisiteur; 
+        }
+
+        public static Zoo GetInstance()
+        {
+            return Zoo.getInstance();
         }
 
         public static string AfficherStock()
