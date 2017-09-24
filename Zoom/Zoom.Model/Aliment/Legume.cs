@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoom.Model.Aliment
 {
-    public class Legume : AAliment, IEntite
+    public class Legume : AAliment
     {
         public Legume(int id, string nom, double prix) : base(id, nom, prix)
         {

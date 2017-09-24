@@ -14,11 +14,14 @@ namespace Zoom.Model.Aliment
 
         public double Prix { get; set; }
 
+        public DateTime Peremption { get; set; }
+
         public AAliment(int id, string nom, double prix)
         {
             this.Id = id;
             this.Nom = nom;
             this.Prix = prix;
+            this.Peremption = DateTime.Now.AddYears(+10);
         }
 
         public override string ToString()

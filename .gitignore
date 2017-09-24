@@ -10,10 +10,11 @@
 /Zoom/Zoom/obj/Release
 /Zoom/UnitTestZoom/obj/Release
 /Zoom/Zoom.DAL/obj
-/Zoom/Zoom.DAL/Debug
+/Zoom/Zoom.DAL/bin/Debug
 /Zoom/Zoom.Model/obj
-/Zoom/Zoom.Model/Debug
+/Zoom/Zoom.Model/bin/Debug
 /Zoom/Zoom.BLL/obj/Debug
 /Zoom/Zoom.BLL/obj/Release
 /Zoom/Zoom.GUI/bin/Debug
 /Zoom/Zoom.BLL/bin/Debug
+/Zoom/Diagramme/obj/Debug
