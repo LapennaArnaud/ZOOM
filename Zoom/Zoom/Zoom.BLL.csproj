@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{9F718FD1-A1C7-493D-AFD9-64E420C24C90}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Zoom.BLL</RootNamespace>
     <AssemblyName>Zoom.BLL</AssemblyName>
@@ -60,7 +60,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controleur\" />
     <Folder Include="Service\Interface\" />
   </ItemGroup>
   <ItemGroup>
