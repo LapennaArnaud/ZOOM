@@ -19,17 +19,20 @@ namespace Zoom.BLL.Service
         public static void Nourrir(APersonne employe, AAnimal a, AAliment al)
         {
             if (employe is INourrir)
-                S_Animal.Manger(a,al); //Remove aliment
-            else 
+            {
+                S_Animal.Manger(a, al); 
+                S_Zoo.SupprimerAliment(al, 1);
+            }
+            else
                 throw new Exception("Cette personne ne peut nourrir d'animal");
         }
 
         public static void Soigner(APersonne employe, AAnimal a)
         {
             if (employe is Veterinaire)
-                S_Animal.Manger(a, al);
+                S_Animal.Soigner(a);
             else
-                throw new Exception("Cette personne ne peut nourrir d'animal");
+                throw new Exception(employe.GetType().Name + " ne peut soigner d'animal");
         }
 
         public new static List<IEntite> GetAll()

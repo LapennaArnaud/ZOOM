@@ -8,7 +8,7 @@ namespace Zoom.Model.Aliment
 {
     public class Cereale : AAliment, IEntite
     {
-        public Cereale(int id, string nom) : base(id, nom)
+        public Cereale(int id, string nom, double prix) : base(id, nom, prix)
         {
             
         }

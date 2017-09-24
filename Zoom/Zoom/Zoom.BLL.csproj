@@ -46,10 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controleur\Zoom.cs" />
-    <Compile Include="Gestion\Banque.cs" />
-    <Compile Include="Gestion\Caisse.cs" />
-    <Compile Include="Gestion\Stock.cs" />
+    <Compile Include="Service\S_Zoo.cs" />
+    <Compile Include="Zoo.cs" />
     <Compile Include="Service\BaseService.cs" />
     <Compile Include="Service\S_Aliment.cs" />
     <Compile Include="Service\S_Animal.cs" />
@@ -62,6 +60,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controleur\" />
     <Folder Include="Service\Interface\" />
   </ItemGroup>
   <ItemGroup>

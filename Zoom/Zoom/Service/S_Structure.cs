@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Zoom.DAL.Gestionnaire;
 using Zoom.Model;
+using Zoom.Model.Aliment;
 using Zoom.Model.Animal;
 using Zoom.Model.Personne;
 using Zoom.Model.Structure;
@@ -54,8 +55,8 @@ namespace Zoom.BLL.Service
             }
         }
 
-// Impossible to secure 2 structures for the same securiteMan
-public static void Surveiller(AStructure s, Securite sc)
+        // Impossible to secure 2 structures for the same securiteMan
+        public static void Surveiller(AStructure s, Securite sc)
         {
             if (GetAllSecureStructure().FirstOrDefault(x => ((AStructure)x).Surveillant.Equals(sc)) is null)
                 s.Surveillant = sc;
@@ -66,10 +67,11 @@ public static void Surveiller(AStructure s, Securite sc)
             return GEntite<IEntite>.GetAll().FindAll(x => x is AEnclos);
         }
 
-    public static void StopSurveiller(AStructure s)
+        public static void StopSurveiller(AStructure s)
         {
             s.Surveillant = null;
         }
+        
 
         public static List<IEntite> GetAllSecureStructure()
         {

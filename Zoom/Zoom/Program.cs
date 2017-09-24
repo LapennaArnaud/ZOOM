@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Zoom.Model.Animal;
-using Zoom.BLL.Controleur;
 using Zoom.DAL.Gestionnaire;
 using Zoom.Model;
 using Zoom.Model.Personne;
@@ -64,6 +63,7 @@ namespace Zoom
                 S_Structure.AffecterAnimal((AStructure)S_Structure.GetAllAEnclos().ElementAt(1), (AAnimal)S_Animal.GetAll().ElementAt(2));
                 S_Structure.AffecterAnimal((AStructure)S_Structure.GetAllAEnclos().ElementAt(1), (AAnimal)S_Animal.GetAll().ElementAt(1));
                 S_Structure.AffecterAnimal((AStructure)S_Structure.GetAllAEnclos().ElementAt(1), (AAnimal)S_Animal.GetAll().ElementAt(0));
+
                 Console.WriteLine("\n\r------------- Liste Enclos ---------- \n\r");
                 S_Structure.GetAllAEnclos().ToList().ForEach(Console.WriteLine);
 

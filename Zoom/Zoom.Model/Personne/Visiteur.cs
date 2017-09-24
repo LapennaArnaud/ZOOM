@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zoom.Model.Personne
 {
-    class Visiteur : APersonne, IEntite
+    public class Visiteur : APersonne, IEntite
     {
         public ECategorieBillet CategorieBillet { get; set; }
 

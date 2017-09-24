@@ -12,15 +12,18 @@ namespace Zoom.Model.Aliment
 
         public string Nom { get; set; }
 
-        public AAliment(int id, string nom)
+        public double Prix { get; set; }
+
+        public AAliment(int id, string nom, double prix)
         {
             this.Id = id;
             this.Nom = nom;
+            this.Prix = prix;
         }
 
         public override string ToString()
         {
-            return string.Format("ID : {0} Type : {1} Nom : {2} ", this.Id, this.GetType().Name, this.Nom);
+            return string.Format("ID : {0} Type : {1} Nom : {2} Prix : {3}", this.Id, this.GetType().Name, this.Nom, this.Prix);
         }
 
     }

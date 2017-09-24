@@ -89,6 +89,12 @@ namespace Zoom.BLL.Service
                     throw new Exception(animal.GetType().Name + " ne peut manger l'aliment : " + aliment.GetType().Name);
             } 
         }
+        public static void Soigner(AAnimal animal)
+        {
+            
+             throw new Exception(" Soigner pas implementé ");
+            
+        }
 
         public static Enum GetEtatFaim(AAnimal animal)
         {

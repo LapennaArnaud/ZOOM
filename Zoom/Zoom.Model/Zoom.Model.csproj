@@ -74,6 +74,7 @@
     <Compile Include="Structure\Enclos.cs" />
     <Compile Include="Structure\QG.cs" />
     <Compile Include="Structure\Stock.cs" />
+    <Compile Include="Zoo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
