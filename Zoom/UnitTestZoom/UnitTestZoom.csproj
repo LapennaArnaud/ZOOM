@@ -58,10 +58,6 @@
       <Project>{d41400c0-ed00-463c-b5af-519ff53af182}</Project>
       <Name>Zoom.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Zoom.GUI\Zoom.GUI.csproj">
-      <Project>{f7e694d2-2423-4d9b-bbd9-4c7092079706}</Project>
-      <Name>Zoom.GUI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Zoom.Model\Zoom.Model.csproj">
       <Project>{4292a96f-c6aa-44e4-a2c4-98b20123de8f}</Project>
       <Name>Zoom.Model</Name>

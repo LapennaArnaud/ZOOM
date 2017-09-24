@@ -35,10 +35,26 @@ namespace Zoom.BLL.Service
                 throw new Exception(employe.GetType().Name + " ne peut soigner d'animal");
         }
 
+        public static void JeterDehors(APersonne employe, Visiteur v)
+        {
+            if (employe is Securite)
+                S_Zoo.SupprimerVisiteur(v);
+            else
+                throw new Exception(employe.GetType().Name + " pas expulser des visiteurs");
+        }
+        public static List<IEntite> GetAllEmploye()
+        {
+            return GEntite<IEntite>.GetAll().FindAll(x => x is Employe);
+        }
+        public static List<IEntite> GetAllVisiteur()
+        {
+            return GEntite<IEntite>.GetAll().FindAll(x => x is Visiteur);
+        }
         public new static List<IEntite> GetAll()
         {
             return GEntite<IEntite>.GetAll().FindAll(x => x is APersonne);
         }
+
         public new static string AfficherAll()
         {
             string description = "";

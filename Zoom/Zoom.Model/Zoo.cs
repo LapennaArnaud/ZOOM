@@ -35,6 +35,7 @@ namespace Zoom.Model
             Adresse = adresse;
             Ville = ville;
             TarifBillet = tarifBillet;
+            Tresorerie = 1000;
             ListVisiteur = new List<Visiteur>();
             ListeAliment = new Dictionary<AAliment, int>();
         }

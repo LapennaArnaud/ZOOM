@@ -18,9 +18,5 @@ namespace Zoom.Model.Personne
         {
         }
 
-        public void Soigner(Model.Animal.AAnimal a)
-        {
-
-        }
     }
 }

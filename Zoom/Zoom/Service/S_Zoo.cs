@@ -31,6 +31,12 @@ namespace Zoom.BLL.Service
                 Zoo.getInstance().Tresorerie += (Zoo.getInstance().TarifBillet * 0.5);
         }
 
+        public static void SupprimerVisiteur(Visiteur visi)
+        {
+            Zoo.getInstance().ListVisiteur.Remove(visi);
+           
+        }
+
         public static void SupprimerAliment(AAliment a, int quantite)
         {
             if (Zoo.getInstance().ListeAliment.ContainsKey(a))
@@ -64,6 +70,21 @@ namespace Zoom.BLL.Service
 
             else
                 throw new Exception("Vous n'avez pas assez d'argent dans votre Zoom ! Trésorerie : " + Zoo.getInstance().Tresorerie);
+        }
+
+        public static List<Visiteur> GetAllVisiteur()
+        {
+            return Zoo.getInstance().ListVisiteur; 
+        }
+
+        public static string AfficherStock()
+        {
+            string res = "";
+            foreach(AAliment a in Zoo.getInstance().ListeAliment.Keys){
+                res += a.ToString() + " Quantité : " + Zoo.getInstance().ListeAliment[a].ToString();
+                res += "\n\r";
+            }
+            return res;
         }
 
     }

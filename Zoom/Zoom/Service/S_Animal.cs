@@ -91,9 +91,7 @@ namespace Zoom.BLL.Service
         }
         public static void Soigner(AAnimal animal)
         {
-            
-             throw new Exception(" Soigner pas implementé ");
-            
+            animal.Vie = 100;
         }
 
         public static Enum GetEtatFaim(AAnimal animal)

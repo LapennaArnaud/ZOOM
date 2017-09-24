@@ -16,11 +16,5 @@ namespace Zoom.Model.Personne
         public Securite(int id, string nom, string prenom, ESexe sexe, DateTime dateNaissance) : base(id, nom, prenom, sexe, dateNaissance)
         {
         }
-
-        public void JeterDehors(APersonne P)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }
